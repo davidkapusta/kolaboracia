@@ -26,7 +26,31 @@ List<int> ReadNumbers(string text)
     return cisla;
 }
 
+void ProcessNumbers(List<int> cisla)
+{
+    double sucet = 0;
+    for (int i = 0; i < cisla.Count; i++)
+    {
+        sucet = sucet + cisla[i];
+    }
+    double priemer = sucet / cisla.Count;
 
+    cisla.Sort();
+
+    int max = cisla[cisla.Count - 1];
+    int median = cisla[cisla.Count / 2];
+
+    PrintResults(priemer, median, max);
+}
+
+void PrintResults(double priemer, int median, int max)
+{
+    Console.WriteLine("--- DATOVA ANALYZA ---");
+    Console.WriteLine("Priemer: " + priemer);
+    Console.WriteLine("Median: " + median);
+    Console.WriteLine("Maximum: " + max);
+    Console.WriteLine("----------------------");
+}
 
 
 
