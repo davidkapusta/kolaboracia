@@ -1,4 +1,4 @@
-void CreateNumbers()
+void VytvorCisla()
 {
     string text = "";
     for (int i = 1; i <= 10000; i++)
@@ -13,7 +13,7 @@ void CreateNumbers()
     Console.WriteLine("Cisla su vytvorene");
 }
  
-List<int> ReadNumbers(string text)
+List<int> CitajCisla(string text)
 {
     List<int> cisla = new List<int>();
     string[] casti = text.Split(',');
@@ -24,9 +24,9 @@ List<int> ReadNumbers(string text)
     }
 
     return cisla;
-}
+} 
 
-void ProcessNumbers(List<int> cisla)
+void ProcesujCisla(List<int> cisla)
 {
     double sucet = 0;
     for (int i = 0; i < cisla.Count; i++)
